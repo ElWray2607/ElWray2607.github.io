@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GeneralInformationCard from '../components/cv/GeneralInformationCard'
+import WorkExperienceCard from '../components/cv/WorkExperienceCard'
+import EducationCard from '../components/cv/EducationCard'
+import {resumePageConfig} from '../config/resumePageConfig';
+---
+
+<Layout>
+    <GeneralInformationCard config={resumePageConfig} client:load />
+    <WorkExperienceCard config={resumePageConfig.workExperience} client:load />
+    <EducationCard config={resumePageConfig.education} client:load />
+    <div style="height: 100px;"></div>
+</Layout>

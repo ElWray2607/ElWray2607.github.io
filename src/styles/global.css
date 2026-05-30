@@ -3,3 +3,80 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    html,
+    body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        font-family: system-ui, sans-serif;
+    }
+
+    h1 {
+        @apply text-[2.5rem] font-bold text-gray-800 mb-4;
+    }
+
+    h2 {
+        @apply text-[2rem] font-bold text-gray-800 mb-4;
+    }
+
+    p {
+        @apply text-gray-600 leading-relaxed;
+    }
+}
+
+@layer components {
+    .container-custom {
+        @apply max-w-[1200px] mx-auto my-8 px-4;
+    }
+
+    .information-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 16px;
+        margin-bottom: 16px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        background-color: #fafafa;
+    }
+
+    .duration-box {
+        border: 0;
+        border-radius: 4px;
+        padding: 4px 10px;
+        background-color: #4287f5;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        gap: 4px;
+    }
+
+    .divider {
+        margin-top: 10px;
+        margin-bottom: 15px;
+        color: #b8b8b8;
+    }
+
+    .duration-box p {
+        color: white;
+        font-weight: bold;
+    }
+
+    .horizontal-list {
+        display: flex; /* Make list items align horizontally */
+        list-style-type: none; /* Remove bullets */
+        padding: 0; /* Remove padding */
+        margin: 10px; /* Remove margin */
+    }
+
+    .horizontal-list li {
+        margin-right: 15px; /* Add space between items */
+        padding: 4px 10px;
+        background-color: #b8b8b8;
+        border-radius: 10px;
+    }
+}

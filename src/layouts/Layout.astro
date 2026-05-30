@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import Navbar from "../components/Navbar";
+import { navItems } from "../config/navConfig";
 ---
 
 <!doctype html>
@@ -13,15 +15,9 @@ import "../styles/global.css";
 		<title>Astro Basics</title>
 	</head>
 	<body>
-		<slot />
+		<Navbar items={navItems} client:load />
+		<main class="container-custom">
+			<slot />
+		</main>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
